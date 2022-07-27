@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles"
-import Routes from "./Router";
+import AppRoutes from "./Router";
 
 const theme = createTheme({
   palette: {
@@ -9,6 +9,10 @@ const theme = createTheme({
     },
     secondary: {
       main: "#F25D07"
+    },
+    text: {
+      primary: "#000",
+      secondary: "#FFF"
     }
   },
   typography: {
@@ -36,7 +40,7 @@ const theme = createTheme({
         },
         h3: {
           fontWeight: 600,
-          fontSize: "26px",
+          fontSize: "24px",
           lineHeight: "33.8px"
         },
         h4: {
@@ -72,7 +76,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Routes />
+      <AppRoutes />
     </ThemeProvider>
   );
 }
